@@ -1,3 +1,5 @@
+// -------- Типы дынных ---------
+
 var str: string = "it works"; // строковый тип данных
 
 str = "it works too";
@@ -13,3 +15,14 @@ bool = false;
 //bool = "string";  ошибка
 
 console.log(str, num, bool);
+
+// ---------- Операции над данными -----------
+console.log("----------------Операции над данными----------------");
+
+var test1: number = 123;
+var test2: string = "abc";
+console.log(test1 + test2); // "123abc"
+
+var test3: number;
+
+// test3 = test1 + test2;  ошибка - пытаемся записать строку в числовой тип
