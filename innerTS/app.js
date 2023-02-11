@@ -17,3 +17,8 @@ var test2 = "abc";
 console.log(test1 + test2); // "123abc"
 var test3;
 // test3 = test1 + test2;  ошибка - пытаемся записать строку в числовой тип
+// ---------- Массивы в TypeScript ----------
+console.log("----------------Массивы в TypeScript----------------");
+var arr1 = ["a", "b", "c", "d", "e"]; // первый способ
+var arr2 = [1, 2, 3, 4, 5]; // второй способ
+console.log(arr1[0], arr2[0]);

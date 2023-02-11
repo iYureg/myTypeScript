@@ -26,3 +26,11 @@ console.log(test1 + test2); // "123abc"
 var test3: number;
 
 // test3 = test1 + test2;  ошибка - пытаемся записать строку в числовой тип
+
+// ---------- Массивы в TypeScript ----------
+console.log("----------------Массивы в TypeScript----------------");
+
+var arr1: string[] = ["a", "b", "c", "d", "e"]; // первый способ
+var arr2: Array<number> = [1, 2, 3, 4, 5]; // второй способ
+
+console.log(arr1[0], arr2[0]);
