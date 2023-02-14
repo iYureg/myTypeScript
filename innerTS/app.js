@@ -64,3 +64,8 @@ function voidFn(test) {
     console.log(test);
 }
 voidFn(false);
+// ------------ Кортежи в TypeScript --------------
+console.log("----------------Кортежи в TypeScript-------------");
+var tuple = ["john", 33];
+console.log(tuple[0]);
+console.log(tuple[1]);

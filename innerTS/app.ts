@@ -91,3 +91,10 @@ function voidFn(test: boolean): void {
   console.log(test);
 }
 voidFn(false);
+
+// ------------ Кортежи в TypeScript --------------
+console.log("----------------Кортежи в TypeScript-------------");
+
+let tuple: [string, number] = ["john", 33];
+console.log(tuple[0]);
+console.log(tuple[1]);
