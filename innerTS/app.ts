@@ -56,3 +56,24 @@ console.log(user);
 user.name = "john";
 user.age = 30;
 console.log(user);
+
+// ------------ Циклы в TypeScript --------------
+console.log("---------------Циклы в TypeScript--------------");
+
+// в цикле for необходимо указывать тип для счетчика
+
+for (let i: number = 0; i <= 10; i++) {
+  console.log(i);
+}
+
+// в циклах for-of и for-in тип указывать не нужно
+
+var arr: number[] = [1, 2, 3, 4, 5];
+for (let elem of arr) {
+  console.log(elem);
+}
+
+var obj = { a: 1, b: 2, c: 3 };
+for (let key in obj) {
+  console.log(key);
+}
