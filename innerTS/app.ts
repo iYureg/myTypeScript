@@ -77,3 +77,17 @@ var obj = { a: 1, b: 2, c: 3 };
 for (let key in obj) {
   console.log(key);
 }
+
+// ------------ Функции в TypeScript --------------
+console.log("----------------Функции в TypeScript-------------");
+
+function func(a: number, b: string): string {
+  return a + b;
+}
+console.log(func(111, "333"));
+
+function voidFn(test: boolean): void {
+  test = true;
+  console.log(test);
+}
+voidFn(false);
