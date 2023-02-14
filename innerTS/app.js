@@ -1,3 +1,4 @@
+"use strict";
 // -------- Типы дынных ---------
 var str = "it works"; // строковый тип данных
 str = "it works too";
@@ -15,10 +16,24 @@ console.log("----------------Операции над данными-------------
 var test1 = 123;
 var test2 = "abc";
 console.log(test1 + test2); // "123abc"
-var test3;
-// test3 = test1 + test2;  ошибка - пытаемся записать строку в числовой тип
+//var test3: number = test3 = test1 + test2;  ошибка - пытаемся записать строку в числовой тип
 // ---------- Массивы в TypeScript ----------
 console.log("----------------Массивы в TypeScript----------------");
 var arr1 = ["a", "b", "c", "d", "e"]; // первый способ
 var arr2 = [1, 2, 3, 4, 5]; // второй способ
 console.log(arr1[0], arr2[0]);
+// ---------- Объекты в TypeScript ----------
+console.log("-----------------Объекты в TypeScript----------------");
+var user = { name: "john", age: 30 };
+// TypeScript в момент объявления, запоминает, а затем контролирует,
+// тип переменной, структуру объекта и типы значений в объекте
+// user = "string"; - error
+// user = { name: "eric", age: 40, salary: 300 }; - error
+// user = { name: "eric" }; - error
+// user.name = 123; - error
+// user.age = "aaa"; - error
+user = { name: "eric", age: 40 };
+console.log(user);
+user.name = "john";
+user.age = 30;
+console.log(user);
