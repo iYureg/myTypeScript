@@ -117,3 +117,33 @@ console.log(current);
 //                            можно записать отсутствующий номер
 //                           ошибки не будет
 console.log(typeof current); // отдаст числовой тип
+//--------указание ключей в перечислениях----------
+console.log("------------указание ключей в перечислениях-----------");
+var Week;
+(function (Week) {
+    Week[Week["Monday"] = 1] = "Monday";
+    Week[Week["Tuesday"] = 2] = "Tuesday";
+    Week[Week["Wednesday"] = 3] = "Wednesday";
+    Week[Week["Thursday"] = 4] = "Thursday";
+    Week[Week["Friday"] = 5] = "Friday";
+    Week[Week["Saturday"] = 6] = "Saturday";
+    Week[Week["Sunday"] = 7] = "Sunday";
+})(Week || (Week = {}));
+console.log(Week[3], Week.Wednesday);
+// ключами могут быть и строки
+var Months;
+(function (Months) {
+    Months["January"] = "\u042F\u043D\u0432\u0430\u0440\u044C";
+    Months["February"] = "\u0424\u0435\u0432\u0440\u0430\u043B\u044C";
+    Months["March"] = "\u041C\u0430\u0440\u0442";
+    Months["April"] = "\u0410\u043F\u0440\u0435\u043B\u044C";
+    Months["May"] = "\u041C\u0430\u0439";
+    Months["June"] = "\u0418\u044E\u043D\u044C";
+    Months["July"] = "\u0418\u044E\u043B\u044C";
+    Months["August"] = "\u0410\u0432\u0433\u0443\u0441\u0442";
+    Months["September"] = "\u0421\u0435\u043D\u0442\u044F\u0431\u0440\u044C";
+    Months["October"] = "\u041E\u043A\u0442\u044F\u0431\u0440\u044C";
+    Months["November"] = "\u041D\u043E\u044F\u0431\u0440\u044C";
+    Months["December"] = "\u0414\u0435\u043A\u0430\u0431\u0440\u044C";
+})(Months || (Months = {}));
+console.log(Months["February"], Months.February);

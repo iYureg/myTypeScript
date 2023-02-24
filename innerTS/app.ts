@@ -161,3 +161,34 @@ console.log(current);
 //                           ошибки не будет
 
 console.log(typeof current); // отдаст числовой тип
+
+//--------указание ключей в перечислениях----------
+console.log("------------указание ключей в перечислениях-----------");
+
+enum Week {
+  Monday = 1, //   Monday = 1,   // достаточно указать первый
+  Tuesday = 2,
+  Wednesday = 3,
+  Thursday = 4,
+  Friday = 5,
+  Saturday = 6,
+  Sunday = 7,
+}
+console.log(Week[3], Week.Wednesday);
+
+// ключами могут быть и строки
+enum Months {
+  January = "Январь",
+  February = "Февраль",
+  March = "Март",
+  April = "Апрель",
+  May = "Май",
+  June = "Июнь",
+  July = "Июль",
+  August = "Август",
+  September = "Сентябрь",
+  October = "Октябрь",
+  November = "Ноябрь",
+  December = "Декабрь",
+}
+console.log(Months["February"], Months.February);
