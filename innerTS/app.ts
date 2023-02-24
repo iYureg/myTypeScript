@@ -122,3 +122,12 @@ console.log(time);
 console.log(hour);
 console.log(min);
 console.log(sec);
+
+// ------оператор rest в кортеже------
+console.log("------------оператор rest в кортеже-----------");
+
+let tpl: [string, ...number[]];
+tpl = ["str", 1, 2, 3];
+console.log(tpl);
+tpl = ["string", 1, 2, 3, 4, 5];
+console.log(tpl);
