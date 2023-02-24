@@ -1,0 +1,2 @@
+# myTypeScript
+learning with TypeScript
