@@ -111,3 +111,14 @@ user2 = ["john", 30, true];
 console.log(user2);
 user2 = ["eric", 32];
 console.log(user2);
+
+// ------Деструктуризация кортежей------
+console.log("------------Деструктуризация кортежей-----------");
+
+let time: [number, number, number] = [12, 59, 59];
+let [hour, min, sec] = time;
+
+console.log(time);
+console.log(hour);
+console.log(min);
+console.log(sec);

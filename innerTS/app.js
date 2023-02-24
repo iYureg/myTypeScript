@@ -79,3 +79,11 @@ user2 = ["john", 30, true];
 console.log(user2);
 user2 = ["eric", 32];
 console.log(user2);
+// ------Деструктуризация кортежей------
+console.log("------------Деструктуризация кортежей-----------");
+var time = [12, 59, 59];
+var hour = time[0], min = time[1], sec = time[2];
+console.log(time);
+console.log(hour);
+console.log(min);
+console.log(sec);
