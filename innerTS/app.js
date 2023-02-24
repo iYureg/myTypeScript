@@ -71,3 +71,11 @@ console.log(tuple[0]);
 console.log(tuple[1]);
 // --------- кортежи для чтения ---------
 var readOnly = ["john", 30];
+// readOnly[0] = "eric"; // ошибка
+// ------Необязательные элементы кортежей------
+console.log("--------Необязательные элементы кортежей-------");
+var user2;
+user2 = ["john", 30, true];
+console.log(user2);
+user2 = ["eric", 32];
+console.log(user2);

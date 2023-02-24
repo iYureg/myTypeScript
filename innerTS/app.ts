@@ -102,3 +102,12 @@ console.log(tuple[1]);
 // --------- кортежи для чтения ---------
 let readOnly: readonly [string, number] = ["john", 30];
 // readOnly[0] = "eric"; // ошибка
+
+// ------Необязательные элементы кортежей------
+console.log("--------Необязательные элементы кортежей-------");
+
+let user2: [string, number, boolean?];
+user2 = ["john", 30, true];
+console.log(user2);
+user2 = ["eric", 32];
+console.log(user2);
