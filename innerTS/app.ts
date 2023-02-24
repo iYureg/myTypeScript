@@ -146,3 +146,18 @@ console.log(curValue);
 
 let curIndex: number = Season.Winter;
 console.log(curIndex);
+
+//--------перечисление как тип----------
+console.log("------------перечисление как тип-----------");
+
+let current: Season = Season.Winter; // переменная типа Season со значением 0
+console.log(current);
+
+// let current: Season = 3 // указываем номер сезона вручную
+// let current: Season = 'str'; // ошибка, попытка записать данные другого типа
+
+// let current: Season = 7; // диапозон значений не отслеживается,
+//                            можно записать отсутствующий номер
+//                           ошибки не будет
+
+console.log(typeof current); // отдаст числовой тип
