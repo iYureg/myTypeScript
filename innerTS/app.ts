@@ -98,3 +98,7 @@ console.log("----------------Кортежи в TypeScript-------------");
 let tuple: [string, number] = ["john", 33];
 console.log(tuple[0]);
 console.log(tuple[1]);
+
+// --------- кортежи для чтения ---------
+let readOnly: readonly [string, number] = ["john", 30];
+// readOnly[0] = "eric"; // ошибка

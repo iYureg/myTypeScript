@@ -69,3 +69,5 @@ console.log("----------------Кортежи в TypeScript-------------");
 var tuple = ["john", 33];
 console.log(tuple[0]);
 console.log(tuple[1]);
+// --------- кортежи для чтения ---------
+var readOnly = ["john", 30];
