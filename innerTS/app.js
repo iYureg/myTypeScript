@@ -94,3 +94,16 @@ tpl = ["str", 1, 2, 3];
 console.log(tpl);
 tpl = ["string", 1, 2, 3, 4, 5];
 console.log(tpl);
+//--------перечисления в TypeScript----------
+console.log("===========перечисления в TypeScript===========");
+var Season;
+(function (Season) {
+    Season[Season["Winter"] = 0] = "Winter";
+    Season[Season["Spring"] = 1] = "Spring";
+    Season[Season["Summer"] = 2] = "Summer";
+    Season[Season["Autumn"] = 3] = "Autumn";
+})(Season || (Season = {}));
+var curValue = Season[0];
+console.log(curValue);
+var curIndex = Season.Winter;
+console.log(curIndex);

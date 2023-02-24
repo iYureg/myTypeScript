@@ -131,3 +131,18 @@ tpl = ["str", 1, 2, 3];
 console.log(tpl);
 tpl = ["string", 1, 2, 3, 4, 5];
 console.log(tpl);
+
+//--------перечисления в TypeScript----------
+console.log("===========перечисления в TypeScript===========");
+
+enum Season {
+  Winter,
+  Spring,
+  Summer,
+  Autumn,
+}
+let curValue: string = Season[0];
+console.log(curValue);
+
+let curIndex: number = Season.Winter;
+console.log(curIndex);
