@@ -147,3 +147,17 @@ var Months;
     Months["December"] = "\u0414\u0435\u043A\u0430\u0431\u0440\u044C";
 })(Months || (Months = {}));
 console.log(Months["February"], Months.February);
+//-------- тип any в TypeScript ----------
+console.log("------------ тип any в TypeScript -----------");
+// тип any, позволяющий пройти проверку значений на этапе компиляции
+var anyType;
+anyType = 123;
+console.log(anyType);
+anyType = "abc";
+console.log(anyType);
+var anyTypeArr = ["abc", true, 123];
+console.log(anyTypeArr);
+anyTypeArr[0] = false;
+anyTypeArr[1] = 456;
+anyTypeArr[2] = "def";
+console.log(anyTypeArr);

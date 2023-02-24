@@ -192,3 +192,21 @@ enum Months {
   December = "Декабрь",
 }
 console.log(Months["February"], Months.February);
+
+//-------- тип any в TypeScript ----------
+console.log("------------ тип any в TypeScript -----------");
+
+// тип any, позволяющий пройти проверку значений на этапе компиляции
+let anyType: any;
+anyType = 123;
+console.log(anyType);
+anyType = "abc";
+console.log(anyType);
+
+let anyTypeArr: any[] = ["abc", true, 123];
+console.log(anyTypeArr);
+
+anyTypeArr[0] = false;
+anyTypeArr[1] = 456;
+anyTypeArr[2] = "def";
+console.log(anyTypeArr);
