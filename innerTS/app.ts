@@ -241,3 +241,25 @@ unBoNuTest = null;
 console.log(`Тип undeBoolNull ничего: ${unBoNuTest}`);
 unBoNuTest = undefined;
 console.log(`Тип undeBoolNull неопределено: ${unBoNuTest}`);
+
+//-------- Тип строкового литерала в TypeScript ----------
+console.log("------------ Тип строкового литерала в TypeScript -----------");
+
+// с помощью оператора объединения можно объединять не только типы, но и строки
+let litStr: "success" | "warning" | "error";
+// переменная будет хранить одну из трех строк
+litStr = "success";
+console.log(litStr);
+litStr = "warning";
+console.log(litStr);
+litStr = "error";
+console.log(litStr);
+// litStr = "abc"; // ошибка
+
+// ----- тип для объединения строк -----
+console.log("-------тип для объединения строк-------");
+// создаем новый тип для строк хранящий одну из трех строк
+type message = "success" | "warning" | "error";
+
+let strMessage: message = "success";
+console.log("Type message: " + strMessage);

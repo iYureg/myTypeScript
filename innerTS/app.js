@@ -181,3 +181,19 @@ unBoNuTest = null;
 console.log("\u0422\u0438\u043F undeBoolNull \u043D\u0438\u0447\u0435\u0433\u043E: ".concat(unBoNuTest));
 unBoNuTest = undefined;
 console.log("\u0422\u0438\u043F undeBoolNull \u043D\u0435\u043E\u043F\u0440\u0435\u0434\u0435\u043B\u0435\u043D\u043E: ".concat(unBoNuTest));
+//-------- Тип строкового литерала в TypeScript ----------
+console.log("------------ Тип строкового литерала в TypeScript -----------");
+// с помощью оператора объединения можно объединять не только типы, но и строки
+var litStr;
+// переменная будет хранить одну из трех строк
+litStr = "success";
+console.log(litStr);
+litStr = "warning";
+console.log(litStr);
+litStr = "error";
+console.log(litStr);
+// litStr = "abc"; // ошибка
+// ----- тип для объединения строк -----
+console.log("-------тип для объединения строк-------");
+var strMessage = "success";
+console.log("Type message: " + strMessage);
