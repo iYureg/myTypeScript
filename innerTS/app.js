@@ -168,3 +168,16 @@ unifiTest = 123;
 console.log(unifiTest);
 unifiTest = "abc";
 console.log(unifiTest);
+// unifiTest = true;  // ошибка
+//-------- псевдонимы типов в TypeScript ----------
+console.log("------------ псевдонимы типов в TypeScript -----------");
+var pseTest = 123;
+console.log("\u0422\u0438\u043F strumber \u0447\u0438\u0441\u043B\u043E: ".concat(pseTest));
+pseTest = "abc";
+console.log("\u0422\u0438\u043F strumber \u0441\u0442\u0440\u043E\u043A\u0430: ".concat(pseTest));
+var unBoNuTest = true;
+console.log("\u0422\u0438\u043F undeBoolNull \u043B\u043E\u0433\u0438\u0447\u0435\u0441\u043A\u043E\u0435: ".concat(unBoNuTest));
+unBoNuTest = null;
+console.log("\u0422\u0438\u043F undeBoolNull \u043D\u0438\u0447\u0435\u0433\u043E: ".concat(unBoNuTest));
+unBoNuTest = undefined;
+console.log("\u0422\u0438\u043F undeBoolNull \u043D\u0435\u043E\u043F\u0440\u0435\u0434\u0435\u043B\u0435\u043D\u043E: ".concat(unBoNuTest));

@@ -222,3 +222,22 @@ unifiTest = "abc";
 console.log(unifiTest);
 
 // unifiTest = true;  // ошибка
+
+//-------- псевдонимы типов в TypeScript ----------
+console.log("------------ псевдонимы типов в TypeScript -----------");
+
+// создаем новый тип - может хранить число или строку
+type strumber = string | number;
+let pseTest: strumber = 123;
+console.log(`Тип strumber число: ${pseTest}`);
+pseTest = "abc";
+console.log(`Тип strumber строка: ${pseTest}`);
+
+// создаем новый тип - может хранить true, false, null, undefined
+type undeBoolNull = boolean | null | undefined;
+let unBoNuTest: undeBoolNull = true;
+console.log(`Тип undeBoolNull логическое: ${unBoNuTest}`);
+unBoNuTest = null;
+console.log(`Тип undeBoolNull ничего: ${unBoNuTest}`);
+unBoNuTest = undefined;
+console.log(`Тип undeBoolNull неопределено: ${unBoNuTest}`);
