@@ -161,3 +161,10 @@ anyTypeArr[0] = false;
 anyTypeArr[1] = 456;
 anyTypeArr[2] = "def";
 console.log(anyTypeArr);
+//-------- объединение типов в TypeScript ----------
+console.log("------------ объединение типов в TypeScript -----------");
+var unifiTest;
+unifiTest = 123;
+console.log(unifiTest);
+unifiTest = "abc";
+console.log(unifiTest);
