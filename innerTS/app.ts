@@ -263,3 +263,32 @@ type message = "success" | "warning" | "error";
 
 let strMessage: message = "success";
 console.log("Type message: " + strMessage);
+
+// ----- Встроенные типы объектов в TypeScript -----
+console.log("-------Встроенные типы объектов в TypeScript-------");
+console.log("------- Date -------");
+let date: Date;
+date = new Date();
+console.log(date);
+date = new Date(2030, 11, 31);
+console.log(date);
+
+console.log("------- RegExp -------");
+let regexp: RegExp;
+regexp = /.+?/;
+console.log(regexp);
+regexp = new RegExp("[a-zA-Z]{1, 4}");
+console.log(regexp);
+
+console.log("------- DOM -------");
+// let elemP: HTMLParagraphElement;
+// elemp = document.querySelector("p");
+
+// let div: HTMLDivElement;
+// div = document.querySelector("div");
+
+// console.log(typeof elemP, typeof div);
+
+console.log("------- Collections -------");
+// let lst: NodeList = document.querySelectorAll('div');
+console.log("_______________________________________");
