@@ -41,27 +41,27 @@ console.log(user);
 console.log("---------------Циклы в TypeScript--------------");
 // в цикле for необходимо указывать тип для счетчика
 for (var i = 0; i <= 10; i++) {
-    console.log(i);
+  console.log(i);
 }
 // в циклах for-of и for-in тип указывать не нужно
 var arr = [1, 2, 3, 4, 5];
 for (var _i = 0, arr_1 = arr; _i < arr_1.length; _i++) {
-    var elem = arr_1[_i];
-    console.log(elem);
+  var elem = arr_1[_i];
+  console.log(elem);
 }
 var obj = { a: 1, b: 2, c: 3 };
 for (var key in obj) {
-    console.log(key);
+  console.log(key);
 }
 // ------------ Функции в TypeScript --------------
 console.log("----------------Функции в TypeScript-------------");
 function func(a, b) {
-    return a + b;
+  return a + b;
 }
 console.log(func(111, "333"));
 function voidFn(test) {
-    test = true;
-    console.log(test);
+  test = true;
+  console.log(test);
 }
 voidFn(false);
 // ------------ Кортежи в TypeScript --------------
@@ -82,7 +82,9 @@ console.log(user2);
 // ------Деструктуризация кортежей------
 console.log("------------Деструктуризация кортежей-----------");
 var time = [12, 59, 59];
-var hour = time[0], min = time[1], sec = time[2];
+var hour = time[0],
+  min = time[1],
+  sec = time[2];
 console.log(time);
 console.log(hour);
 console.log(min);
@@ -98,10 +100,10 @@ console.log(tpl);
 console.log("===========перечисления в TypeScript===========");
 var Season;
 (function (Season) {
-    Season[Season["Winter"] = 0] = "Winter";
-    Season[Season["Spring"] = 1] = "Spring";
-    Season[Season["Summer"] = 2] = "Summer";
-    Season[Season["Autumn"] = 3] = "Autumn";
+  Season[(Season["Winter"] = 0)] = "Winter";
+  Season[(Season["Spring"] = 1)] = "Spring";
+  Season[(Season["Summer"] = 2)] = "Summer";
+  Season[(Season["Autumn"] = 3)] = "Autumn";
 })(Season || (Season = {}));
 var curValue = Season[0];
 console.log(curValue);
@@ -121,30 +123,30 @@ console.log(typeof current); // отдаст числовой тип
 console.log("------------указание ключей в перечислениях-----------");
 var Week;
 (function (Week) {
-    Week[Week["Monday"] = 1] = "Monday";
-    Week[Week["Tuesday"] = 2] = "Tuesday";
-    Week[Week["Wednesday"] = 3] = "Wednesday";
-    Week[Week["Thursday"] = 4] = "Thursday";
-    Week[Week["Friday"] = 5] = "Friday";
-    Week[Week["Saturday"] = 6] = "Saturday";
-    Week[Week["Sunday"] = 7] = "Sunday";
+  Week[(Week["Monday"] = 1)] = "Monday";
+  Week[(Week["Tuesday"] = 2)] = "Tuesday";
+  Week[(Week["Wednesday"] = 3)] = "Wednesday";
+  Week[(Week["Thursday"] = 4)] = "Thursday";
+  Week[(Week["Friday"] = 5)] = "Friday";
+  Week[(Week["Saturday"] = 6)] = "Saturday";
+  Week[(Week["Sunday"] = 7)] = "Sunday";
 })(Week || (Week = {}));
 console.log(Week[3], Week.Wednesday);
 // ключами могут быть и строки
 var Months;
 (function (Months) {
-    Months["January"] = "\u042F\u043D\u0432\u0430\u0440\u044C";
-    Months["February"] = "\u0424\u0435\u0432\u0440\u0430\u043B\u044C";
-    Months["March"] = "\u041C\u0430\u0440\u0442";
-    Months["April"] = "\u0410\u043F\u0440\u0435\u043B\u044C";
-    Months["May"] = "\u041C\u0430\u0439";
-    Months["June"] = "\u0418\u044E\u043D\u044C";
-    Months["July"] = "\u0418\u044E\u043B\u044C";
-    Months["August"] = "\u0410\u0432\u0433\u0443\u0441\u0442";
-    Months["September"] = "\u0421\u0435\u043D\u0442\u044F\u0431\u0440\u044C";
-    Months["October"] = "\u041E\u043A\u0442\u044F\u0431\u0440\u044C";
-    Months["November"] = "\u041D\u043E\u044F\u0431\u0440\u044C";
-    Months["December"] = "\u0414\u0435\u043A\u0430\u0431\u0440\u044C";
+  Months["January"] = "\u042F\u043D\u0432\u0430\u0440\u044C";
+  Months["February"] = "\u0424\u0435\u0432\u0440\u0430\u043B\u044C";
+  Months["March"] = "\u041C\u0430\u0440\u0442";
+  Months["April"] = "\u0410\u043F\u0440\u0435\u043B\u044C";
+  Months["May"] = "\u041C\u0430\u0439";
+  Months["June"] = "\u0418\u044E\u043D\u044C";
+  Months["July"] = "\u0418\u044E\u043B\u044C";
+  Months["August"] = "\u0410\u0432\u0433\u0443\u0441\u0442";
+  Months["September"] = "\u0421\u0435\u043D\u0442\u044F\u0431\u0440\u044C";
+  Months["October"] = "\u041E\u043A\u0442\u044F\u0431\u0440\u044C";
+  Months["November"] = "\u041D\u043E\u044F\u0431\u0440\u044C";
+  Months["December"] = "\u0414\u0435\u043A\u0430\u0431\u0440\u044C";
 })(Months || (Months = {}));
 console.log(Months["February"], Months.February);
 //-------- тип any в TypeScript ----------
@@ -172,15 +174,33 @@ console.log(unifiTest);
 //-------- псевдонимы типов в TypeScript ----------
 console.log("------------ псевдонимы типов в TypeScript -----------");
 var pseTest = 123;
-console.log("\u0422\u0438\u043F strumber \u0447\u0438\u0441\u043B\u043E: ".concat(pseTest));
+console.log(
+  "\u0422\u0438\u043F strumber \u0447\u0438\u0441\u043B\u043E: ".concat(pseTest)
+);
 pseTest = "abc";
-console.log("\u0422\u0438\u043F strumber \u0441\u0442\u0440\u043E\u043A\u0430: ".concat(pseTest));
+console.log(
+  "\u0422\u0438\u043F strumber \u0441\u0442\u0440\u043E\u043A\u0430: ".concat(
+    pseTest
+  )
+);
 var unBoNuTest = true;
-console.log("\u0422\u0438\u043F undeBoolNull \u043B\u043E\u0433\u0438\u0447\u0435\u0441\u043A\u043E\u0435: ".concat(unBoNuTest));
+console.log(
+  "\u0422\u0438\u043F undeBoolNull \u043B\u043E\u0433\u0438\u0447\u0435\u0441\u043A\u043E\u0435: ".concat(
+    unBoNuTest
+  )
+);
 unBoNuTest = null;
-console.log("\u0422\u0438\u043F undeBoolNull \u043D\u0438\u0447\u0435\u0433\u043E: ".concat(unBoNuTest));
+console.log(
+  "\u0422\u0438\u043F undeBoolNull \u043D\u0438\u0447\u0435\u0433\u043E: ".concat(
+    unBoNuTest
+  )
+);
 unBoNuTest = undefined;
-console.log("\u0422\u0438\u043F undeBoolNull \u043D\u0435\u043E\u043F\u0440\u0435\u0434\u0435\u043B\u0435\u043D\u043E: ".concat(unBoNuTest));
+console.log(
+  "\u0422\u0438\u043F undeBoolNull \u043D\u0435\u043E\u043F\u0440\u0435\u0434\u0435\u043B\u0435\u043D\u043E: ".concat(
+    unBoNuTest
+  )
+);
 //-------- Тип строкового литерала в TypeScript ----------
 console.log("------------ Тип строкового литерала в TypeScript -----------");
 // с помощью оператора объединения можно объединять не только типы, но и строки
