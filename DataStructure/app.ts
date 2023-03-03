@@ -1,52 +1,15 @@
 "use strict";
 
-console.log("---------- Интерфейсы в TypeScript ---------");
+console.log("---------- Массивы в объектах в TypeScript ---------");
 
-interface User {
+let prod1: { name: string; colors: string[] };
+prod1 = { name: "notebook", colors: ["red", "black", "grey"] };
+console.log("prod1 -> ", prod1.name, " - ", prod1.colors);
+
+console.log("---------- Через интерфейс ---------");
+interface Product {
   name: string;
-  age?: number;
+  colors: string[];
 }
-console.log("---------- User ---------");
-let user: User = { name: "john" };
-console.log(user.name, " - ", user.age);
-user.age = 30;
-console.log(user.name, " - ", user.age);
-
-console.log("---------- Employee ---------");
-interface Employee {
-  name: string;
-  surn: string;
-  age?: number;
-  salary?: number;
-}
-
-let employee: Employee = { name: "john", surn: "smit" };
-console.log(
-  employee.name,
-  " - ",
-  employee.surn,
-  " - ",
-  employee.age,
-  " - ",
-  employee.salary
-);
-employee.age = 30;
-console.log(
-  employee.name,
-  " - ",
-  employee.surn,
-  " - ",
-  employee.age,
-  " - ",
-  employee.salary
-);
-employee.salary = 400;
-console.log(
-  employee.name,
-  " - ",
-  employee.surn,
-  " - ",
-  employee.age,
-  " - ",
-  employee.salary
-);
+let prod2: Product = { name: "notebook", colors: ["red", "black", "yellow"] };
+console.log("prod2 -> ", prod2.name, " - ", prod2.colors);
