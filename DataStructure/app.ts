@@ -1,15 +1,62 @@
 "use strict";
 
-console.log("---------- Массивы в объектах в TypeScript ---------");
-
-let prod1: { name: string; colors: string[] };
-prod1 = { name: "notebook", colors: ["red", "black", "grey"] };
-console.log("prod1 -> ", prod1.name, " - ", prod1.colors);
-
-console.log("---------- Через интерфейс ---------");
-interface Product {
+console.log("---------- Сложные объекты в TypeScript ---------");
+// объекты могут быть любой сложности
+interface MyEvent {
   name: string;
-  colors: string[];
+  time: {
+    start: string;
+    finish: string;
+  };
 }
-let prod2: Product = { name: "notebook", colors: ["red", "black", "yellow"] };
-console.log("prod2 -> ", prod2.name, " - ", prod2.colors);
+
+let myEvent: MyEvent = {
+  name: "my new event",
+  time: {
+    start: "2030-11-01",
+    finish: "2030-12-31",
+  },
+};
+console.log("---------- объект myEvent через интерфейс MyEvent ---------");
+console.log(
+  myEvent.name,
+  " - time ->",
+  myEvent.time.start,
+  " - ",
+  myEvent.time.finish
+);
+
+interface Employee {
+  name: string;
+  position: {
+    name: string;
+    salary: number;
+  };
+  addr: {
+    country: string;
+    city: string;
+  };
+}
+let employee: Employee = {
+  name: "ivan",
+  position: {
+    name: "programmer",
+    salary: 1000,
+  },
+  addr: {
+    country: "Russia",
+    city: "Stalingrad",
+  },
+};
+console.log("---------- объект employee через интерфейс Employee ---------");
+console.log(
+  employee.name,
+  " - ",
+  employee.position.name,
+  " - ",
+  employee.position.salary,
+  " - ",
+  employee.addr.city,
+  " - ",
+  employee.addr.country
+);
